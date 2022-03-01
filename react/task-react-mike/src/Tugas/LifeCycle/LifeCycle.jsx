@@ -9,15 +9,15 @@ class LifeCycle extends Component {
        super();   
        this.state = {
            search: '',
-           data: []
+           data: []                                              
        }
-   }
+   }                                                                    
 
    searching = (val) => {
       this.setState({search: val.target.value});
    }
  
-    Api = () => {
+    Api = () => {                                   
     axios.get(
         `https://newsapi.org/v2/everything?q=tesla&sortBy=publishedAt&apiKey=1e4d7358c26843d98c618391469576e2`
     ) 
@@ -32,7 +32,7 @@ class LifeCycle extends Component {
               err
             });                
         })
-    }
+    }                                                               
 
     handlerSubmit = () => {
         axios.get(
@@ -64,8 +64,8 @@ class LifeCycle extends Component {
         return (
             <div>
               <h2 className='bg-dark text-white'>Berita Terkini</h2>
-                <div className='container'>
-                    <form action="" onSubmit={this.berita}>
+                <div className='container'>                                     
+                    <form action="" className='container' onSubmit={this.berita}>
                         <input 
                         className='mt-5' 
                         value={this.state.search}
