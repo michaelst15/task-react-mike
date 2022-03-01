@@ -34,44 +34,50 @@ class LifeCycle extends Component {
         })
     }
 
-    // handlerSubmit = (e) => {
-    //     e.preventDefault();
-    //     axios.get(
-    //      `https://newsapi.org/v2/everything?q=${this.state.search}&sortBy=publishedAt&apiKey=1e4d7358c26843d98c618391469576e2`
-    //         ) 
-    //     .then(response => {
-    //         this.setState ({
-    //        data: response.data.articles
-    //         });
-    //     })        
-    //     .catch(err => {
-    //         this.setState ({
-    //           err
-    //         });         
-    //     })
-    // }
+    handlerSubmit = () => {
+        axios.get(
+         `https://newsapi.org/v2/everything?q=${this.state.search}&sortBy=publishedAt&apiKey=1e4d7358c26843d98c618391469576e2`
+            ) 
+        .then(response => {
+            this.setState ({
+           data: response.data.articles
+            });
+        })        
+        .catch(err => {
+            this.setState ({
+              err
+            });         
+        })
+    }
+
+    berita = (e) => {
+        e.preventDefault();
+        this.handlerSubmit();
+    }
 
     componentDidMount() {
         this.Api();
+        
     }
                 
-    render() {
-         
+    render() {    
         return (
             <div>
-               <h2 className='bg-dark text-white'>Berita Terkini</h2>
-               <div className='container'>
-               <input 
-               className='mt-5' 
-               value={this.state.search}
-               type="text" 
-               placeholder='Search' />
-               <button 
-               className='btn btn-dark mt-2' 
-               onChange={this.handlerSubmit}>
-                   Cari
-               </button>
-               </div>
+              <h2 className='bg-dark text-white'>Berita Terkini</h2>
+                <div className='container'>
+                    <form action="" onSubmit={this.berita}>
+                        <input 
+                        className='mt-5' 
+                        value={this.state.search}
+                        onChange={this.searching}
+                        type="text" 
+                        placeholder='Search' 
+                        />
+                        <button className='btn btn-dark mt-2'>
+                            Cari
+                        </button>
+                    </form>
+                </div>
                <div className='container mt-5'>
                   {this.state.data.map((data) => {
                       return (
