@@ -5,10 +5,10 @@ import Navbar from './NavBar/Navbar';
 function Header() {
         return (
           <div>
-            <Navbar
+          <Navbar
            gambar={Lpage}
-           button1="Home"
-           button2="Crypto"
+           button1="Home"        
+           button2="Crypto" 
            button3="Tech"
            button4="Finance"
            title="Market Analyst"
