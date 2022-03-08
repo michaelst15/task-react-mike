@@ -1,10 +1,12 @@
-const Jumbotron = ({gambar, button1, button2, button3, button4, button5, title, article}) => {
+import React, { Link } from 'react-router-dom';
+
+const Navbar = ({gambar, button1, button2, button3, button4, button5, title, article}) => {
   return(
    <div>
        <img src={gambar} className="w-100" style={{height: 500}}
        />
        <div className="mt-2" style={{marginLeft: 1000, position: "absolute", top: 10}}>
-         <button className="btn btn-primary fw-bold" style={{marginRight: 10}}>{button1}</button>
+         <Link className="btn btn-primary fw-bold" style={{marginRight: 10}}>{button1}</Link>
          <button className="btn btn-primary fw-bold" style={{marginRight: 10}}>{button2}</button>
          <button className="btn btn-primary fw-bold" style={{marginRight: 10}}>{button3}</button>
          <button className="btn btn-primary fw-bold" style={{marginRight: 10}}>{button4}</button>
@@ -20,4 +22,4 @@ const Jumbotron = ({gambar, button1, button2, button3, button4, button5, title, 
    )
 }
 
-export default Jumbotron;
+export default Navbar;

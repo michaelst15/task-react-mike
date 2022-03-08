@@ -1,17 +1,16 @@
 import React from 'react';
 import Lpage from './NavBar/Img/Lpage.jpg';
-import Jumbotron from './NavBar/Jumbotron';
+import Navbar from './NavBar/Navbar';
 
-class Header extends React.Component {
-    render() {
+function Header() {
         return (
           <div>
-            <Jumbotron
+            <Navbar
            gambar={Lpage}
            button1="Home"
-           button2="info"
-           button3="Analyst"
-           button4="Prospect"
+           button2="Crypto"
+           button3="Tech"
+           button4="Finance"
            title="Market Analyst"
            article="Pemasaran yang mencakup konsumen secara luas dengan jasa analisis yang 
            tepat
@@ -22,6 +21,5 @@ class Header extends React.Component {
           </div>
         )   
     }
-} 
 
 export default Header;

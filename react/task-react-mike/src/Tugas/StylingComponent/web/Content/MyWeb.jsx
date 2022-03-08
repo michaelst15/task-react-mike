@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '../Tambahan/Card';
 
-class MyWeb extends React.Component {
-  render() {
+function MyWeb() {
+   const [name] = useState('Global')
+
      return (
        <div className="container" style={{marginTop: 50}}>
          <h3 className="fw-bold fst-italic">MARKET ANALYST</h3>
@@ -11,7 +12,7 @@ class MyWeb extends React.Component {
           Semua informasi yang berkaitan dengan keinginan pelanggan bisa diketahui melalui analisa pasar ini.          
           Dengan lebih memahami pelanggan, perusahaan bisa menciptakan produk yang sesuai dengan apa yang diinginkan oleh pelanggannya.</p>
           <hr />
-          <h2 className="text-center mt-5">Data Market Analyst</h2>
+          <h2 className="text-center mt-5">Data Market Analyst {name}</h2>
         <div className="container d-flex text-center">
           <div className='row'>
             <div className='col-md-6'>
@@ -53,8 +54,7 @@ class MyWeb extends React.Component {
         </div>
        </div>
       </div>
-     )
+     )   
   }
-}
 
 export default MyWeb;
