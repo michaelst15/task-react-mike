@@ -44,19 +44,19 @@ class FromRegistrasi extends React.Component {
                   <br />
                 <label>Email Kamu :
                   <br />
-                    <input name='email' type='email' onChange={value => this.setState({email: value.target.value})}/>
+                    <input required='true' name='email' type='email' onChange={value => this.setState({email: value.target.value})}/>
                 </label>  
                   <br />
                   <br />
                   <label>Password Kamu :
                   <br /> 
-                    <input name='password' type='password' onChange={value => this.setState({password: value.target.value})}/>
+                    <input required='true' name='password' type='password' onChange={value => this.setState({password: value.target.value})}/>
                 </label> 
                   <br />
                   <br />
                 <label>Jenis Patah Hati :
                   <br /> 
-                    <select name='JenisPatahHati' id='pilihan' onChange={value => this.setState({JenisPatahHati: value.target.value})}>
+                    <select required='true' name='JenisPatahHati' id='pilihan' onChange={value => this.setState({JenisPatahHati: value.target.value})}>
                         <option className='text-center'>Pilihan</option>
                         <option>Di Tinggal Karna Orang Ketiga</option>
                         <option>Di Tinggal Tanpa Alasan</option>
@@ -72,11 +72,11 @@ class FromRegistrasi extends React.Component {
                   <br />
                 <label>Motivasi Untuk Move On : 
                   <br />
-                    <textarea name='MotivasiMoveOn' id='textArea' id='' cols='40' rows='5' onChange={value => this.setState({MotivasiMoveOn: value.target.value})}></textarea>
+                    <textarea required='true' name='MotivasiMoveOn' id='textArea' id='' cols='40' rows='5' onChange={value => this.setState({MotivasiMoveOn: value.target.value})}></textarea>
                 </label>
                   <br />
                   <br />
-                <button type='submit' className='btn bg-dark text-white'>Sign In</button>
+                <button required='true' type='submit' className='btn bg-dark text-white'>Sign In</button>
                   <br />
                   <br />
                     <p style={{marginTop: '-10px'}}>"Cinta itu sulit dimengerti dan dipahami<br/>dikala kita mencintai seseorang yang sangat<br/>

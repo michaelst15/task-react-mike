@@ -3,30 +3,29 @@ import axios from 'axios';
 import './Style.css';
 
 
-class LifeCycle extends Component {
+class Lifecycle extends Component {
 
-   constructor() {
-       super();   
+    constructor() {
+     super();
        this.state = {
            search: '',
            data: []                                              
-       }
-   }                                                                    
-
+       }  
+    }                                                                   
+   
    searching = (val) => {
       this.setState({search: val.target.value});
    }
  
     Api = () => {                                   
     axios.get(
-        `https://newsapi.org/v2/everything?q=tesla&sortBy=publishedAt&apiKey=1e4d7358c26843d98c618391469576e2`
+       `https://newsapi.org/v2/everything?q=crypto&from=2022-02-07&sortBy=publishedAt&apiKey=1e4d7358c26843d98c618391469576e2`
     ) 
         .then(response => {
             this.setState ({
-           data: response.data.articles
-            }
-            );
-        })
+           data: console.log(response)
+            });
+        }) 
         .catch(err => {
             this.setState ({
               err
@@ -36,7 +35,7 @@ class LifeCycle extends Component {
 
     handlerSubmit = () => {
         axios.get(
-         `https://newsapi.org/v2/everything?q=${this.state.search}&sortBy=publishedAt&apiKey=1e4d7358c26843d98c618391469576e2`
+         `https://financialtimesmikilior1v1.p.rapidapi.com/getAspectsList`
             ) 
         .then(response => {
             this.setState ({
@@ -81,14 +80,14 @@ class LifeCycle extends Component {
                <div className='container mt-5'>
                   {this.state.data.map((data) => {
                       return (
-                          <div className='container bg-dark text-white w-50'>
-                            <img src={data.urlToImage} className='mt-3'></img>
+                            <div className='container bg-dark text-white w-50'>
+                              <img src={data.urlToImage} className='mt-3'></img>
                                 <div className='artikel'>
-                                <div>{data.title}</div>
-                                <div>{data.publishedAt}</div>
-                                <div>{data.description}</div>
-                            </div>
-                                <button className='btn btn-primary mt-2'>Read more</button>
+                                    <div>{data.title}</div>
+                                    <div>{data.publishedAt}</div>
+                                    <div>{data.description}</div>
+                                </div>
+                                    <button className='btn btn-primary mt-2'>Read more</button>
                             </div>
                               )  
                           })
@@ -100,4 +99,4 @@ class LifeCycle extends Component {
         
 }
 
-export default LifeCycle;
+export default Lifecycle;
