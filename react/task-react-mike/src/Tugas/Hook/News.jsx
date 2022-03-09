@@ -8,11 +8,11 @@ function News() {
 
   const [value, setValue] = useState('');
   const [data, setData] = useState([]);                                                         
-   
+    
   const searching = (val) => {
       setValue(val.target.value);
    }
- 
+    
   const Api = () => {                           
     axios.get(
        `https://newsapi.org/v2/everything?q=tesla&sortBy=publishedAt&apiKey=1e4d7358c26843d98c618391469576e2`

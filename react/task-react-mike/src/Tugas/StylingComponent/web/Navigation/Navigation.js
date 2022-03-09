@@ -7,10 +7,12 @@
      <div>
        <img src={gambar} className="w-100" style={{height: 500}}/>
          <div className="mt-2" style={{marginLeft: 1000, position: "absolute", top: 10}}>
-          <Link className="btn btn-primary fw-bold" style={{marginRight: 10}}>{button1}</Link>
-          <Link className="btn btn-primary fw-bold" style={{marginRight: 10}}>{button2}</Link>
-          <Link className="btn btn-primary fw-bold" style={{marginRight: 10}}>{button3}</Link>
-          <Link className="btn btn-primary fw-bold" style={{marginRight: 10}}>{button4}</Link>
+          <nav>
+            <Link to='/'><div className='btn btn-primary' style={{marginRight: 10}}>{button1}</div></Link>  
+            <Link to='/Crypto'><div className='btn btn-primary' style={{marginRight: 10}}>{button2}</div></Link>  
+            <Link to='/Tech'><div className='btn btn-primary' style={{marginRight: 10}}>{button3}</div></Link>
+            <Link to='/Finance'><div className='btn btn-primary' style={{marginRight: 10}}>{button4}</div></Link>
+          </nav>
          </div> 
          <div className="container">  
            <div style={{position: "absolute", top: 80, color: "white", width: 400, fontFamily: "Verdana, Geneva, Tahoma, sans-serif"}}>
