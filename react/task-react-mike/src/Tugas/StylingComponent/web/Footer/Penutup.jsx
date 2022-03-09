@@ -1,7 +1,6 @@
 import React from 'react';
 
-class Penutup extends React.Component {
-    render() {
+function Penutup() {
         return(
         <div className="footer">
            <footer className='mt-5 mb-2 bg-dark w-100' style={{height: 50,position: "relative", bottom: -9}}>
@@ -10,6 +9,5 @@ class Penutup extends React.Component {
         </div>
         )
     }
-}
 
 export default Penutup;

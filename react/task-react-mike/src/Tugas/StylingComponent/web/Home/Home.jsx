@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Card from '../Tambahan/Card';
 
-function MyWeb() {
+function Home() {
    const title1 = 'MARKET ANALYST';
    const title2 = 'Data Market Analyst Global';
 
@@ -58,4 +58,4 @@ function MyWeb() {
      )   
   }
 
-export default MyWeb;
+export default Home;

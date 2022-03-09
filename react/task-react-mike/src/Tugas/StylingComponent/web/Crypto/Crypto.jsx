@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './Styleweb.css';
 
-function IndexCrypto() {
+function Crypto() {
     const [data, setData] = useState([]);
 
 
@@ -37,4 +37,4 @@ return (
     </div>
   )
 }
-export default IndexCrypto;
+export default Crypto;
